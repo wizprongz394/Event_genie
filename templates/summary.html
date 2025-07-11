@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Summary</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            padding: 40px;
+            background-color: #f1f3f4;
+            color: #202124;
+            margin: 0;
+        }
+
+        h2 {
+            color: #4285F4;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: #5f6368;
+            margin-top: 30px;
+        }
+
+        .summary-box {
+            background-color: #ffffff;
+            border-left: 6px solid #FBBC05;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 1px 3px rgba(60, 64, 67, 0.15);
+            max-width: 700px;
+        }
+
+        .summary-box strong {
+            color: #202124;
+            font-size: 1.05em;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-top: 15px;
+            max-width: 700px;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+            color: #3c4043;
+        }
+
+        .no-feedback {
+            color: #888;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🔍 Feedback Summary for Event #{{ event_id }}</h2>
+
+    {% if summary and summary != "No feedback available to summarize." %}
+        <div class="summary-box">
+            <strong>📝 Summary:</strong>
+            <p>{{ summary }}</p>
+        </div>
+
+        {% if feedback_list %}
+            <h3>📋 Individual Feedbacks:</h3>
+            <ul>
+                {% for fb in feedback_list %}
+                    <li>{{ fb }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% else %}
+        <p class="no-feedback">No feedback submitted yet.</p>
+    {% endif %}
+
+</body>
+</html>
