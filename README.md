@@ -87,16 +87,10 @@ Visit: `http://localhost:5000` in your browser
 
 ---
 
-## 📸 Screenshots
-
-(Add screenshots here if available)
-
----
-
 ## 🧑‍💻 Author
 
 **[@wizprongz394](https://github.com/wizprongz394)**
-Built with ❤️ using Flask and Gemini API
+They call me Prongz
 
 ---
 
@@ -105,6 +99,5 @@ Built with ❤️ using Flask and Gemini API
 MIT License
 See [`LICENSE`](LICENSE) for more details.
 
-```
 
 
